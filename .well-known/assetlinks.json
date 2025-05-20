@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "buzz.dreamteam",
+      "sha256_cert_fingerprints": [
+        "46:BC:DF:62:C5:A9:66:53:E7:68:B2:D5:01:65:76:29:09:E0:A6:82:6F:80:FA:80:5C:10:BB:B5:38:91:9C:7E"
+      ]
+    }
+  }
+]
