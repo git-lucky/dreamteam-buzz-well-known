@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "A57KTL95E8.buzz.dreamteam",
+        "paths": ["/event/*"]
+      }
+    ]
+  }
+}
