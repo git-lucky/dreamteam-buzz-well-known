@@ -3,5 +3,11 @@
   [headers.values]
     Content-Type = "application/json"
 
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+    Access-Control-Allow-Origin = "*"
+
 [build]
   publish = "public" 
