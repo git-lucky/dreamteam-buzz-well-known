@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamTeam Event</title>
+    
+    <!-- Open Graph metadata for rich link previews -->
+    <meta property="og:title" content="DreamTeam Event">
+    <meta property="og:description" content="Join this DreamTeam event to organize with your team">
+    <meta property="og:image" content="https://dreamteam.buzz/images/buzzenbee1200.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="DreamTeam Logo">
+    <meta property="og:url" content="https://dreamteam.buzz">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DreamTeam">
+    
+    <!-- Apple specific -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon" href="/images/buzzenbee1200.png">
+    
+    <!-- Twitter Card metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DreamTeam Event">
+    <meta name="twitter:description" content="Join this DreamTeam event to organize with your team">
+    <meta name="twitter:image" content="https://dreamteam.buzz/images/buzzenbee1200.png">
+    
+    <!-- iOS specific -->
+    <meta property="al:ios:url" content="dreamteam://event">
+    <meta property="al:ios:app_store_id" content="6505043024">
+    <meta property="al:ios:app_name" content="DreamTeam">
+    
+    <!-- Auto-redirect to app store or app -->
+    <meta http-equiv="refresh" content="0;url=dreamteam://">
+    
+    <style>
+        body { 
+            display: none; 
+        }
+    </style>
+    
+    <script>
+        // Extract event ID from URL and update meta tags
+        window.onload = function() {
+            const path = window.location.pathname;
+            const eventId = path.split('/').pop();
+            
+            if (eventId && eventId !== 'index.html') {
+                // Update meta tags for link preview
+                document.querySelector('meta[property="og:title"]').setAttribute('content', `DreamTeam Event #${eventId}`);
+                document.querySelector('meta[property="al:ios:url"]').setAttribute('content', `dreamteam://event/${eventId}`);
+                
+                // Redirect to app with event ID
+                window.location.href = `dreamteam://event/${eventId}`;
+            } else {
+                window.location.href = 'dreamteam://';
+            }
+        };
+    </script>
+</head>
+<body>
+    <!-- No visible content needed -->
+</body>
+</html> 

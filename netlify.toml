@@ -9,5 +9,17 @@
     Cache-Control = "public, max-age=86400"
     Access-Control-Allow-Origin = "*"
 
+[[headers]]
+  for = "/"
+  [headers.values]
+    Content-Type = "text/html; charset=UTF-8"
+    Cache-Control = "public, max-age=0, must-revalidate"
+    X-Content-Type-Options = "nosniff"
+
+[[redirects]]
+  from = "/event/*"
+  to = "/event/index.html"
+  status = 200
+
 [build]
   publish = "public" 
